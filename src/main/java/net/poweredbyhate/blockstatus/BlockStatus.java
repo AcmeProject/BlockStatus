@@ -30,6 +30,7 @@ public final class BlockStatus extends JavaPlugin {
         saveDefaultConfig();
         Bukkit.getPluginManager().registerEvents(new SignChangeListener(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
+        debug = getConfig().getBoolean("debug");
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -44,6 +45,7 @@ public final class BlockStatus extends JavaPlugin {
     }
 
     public void checkDependencies() {
+        debug("Checking for dependencies");
         if (getServer().getPluginManager().getPlugin("Citizens") == null) {
             getLogger().log(Level.SEVERE, "Citizens plugin not found!");
             getServer().getPluginManager().disablePlugin(this);

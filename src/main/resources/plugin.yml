@@ -2,4 +2,5 @@ name: BlockStatus
 version: ${project.version}
 main: net.poweredbyhate.blockstatus.BlockStatus
 depend: [Citizens]
+load: POSTWORLD
 authors: [LaxWasHere]
