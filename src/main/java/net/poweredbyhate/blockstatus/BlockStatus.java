@@ -72,7 +72,7 @@ public final class BlockStatus extends JavaPlugin {
 
             NPC npc = CitizensAPI.getNPCRegistry().getById(npcid);
             StatusBlock leStatus = new StatusBlock(stringToLoc(block).getBlock(), name, npc);
-            if (!npc.isSpawned()) {
+            if (npc != null && !npc.isSpawned()) {
                 npc.spawn(npc.getStoredLocation());
             }
             statusblocks.add(leStatus);

@@ -41,6 +41,12 @@ public class StatusBlock {
         changeStatus();
     }
 
+    public void destroy() {
+        if (npc != null) {
+            npc.destroy();
+        }
+    }
+
     private void changeStatus() {
         if (status) {
             this.block.setType(Material.valueOf(BlockStatus.getInstance().getConfig().getString("onblock")));

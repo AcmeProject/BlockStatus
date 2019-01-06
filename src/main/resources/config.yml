@@ -3,6 +3,5 @@ onblock: EMERALD_BLOCK
 #
 #The block that will indicate if the player is OFFLINE
 offblock: REDSTONE_BLOCK
-#
 #Coming soon feature.
 Bungeecord: false
